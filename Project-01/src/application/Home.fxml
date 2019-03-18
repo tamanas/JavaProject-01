@@ -1,7 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-	
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="660.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="application.HomeController">
+   <children>
+      <TextField layoutX="159.0" layoutY="231.0" prefHeight="25.0" prefWidth="386.0" />
+      <TextField layoutX="159.0" layoutY="333.0" prefHeight="30.0" prefWidth="386.0" />
+      <Label layoutX="159.0" layoutY="200.0" prefHeight="31.0" prefWidth="127.0" text="First Name">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="159.0" layoutY="302.0" text="Last Name">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="200.0" layoutY="432.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" text="Order">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="381.0" layoutY="432.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="117.0" text="Reservation">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Separator layoutY="574.0" prefHeight="25.0" prefWidth="703.0">
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+         <effect>
+            <Blend />
+         </effect>
+      </Separator>
+      <TextField alignment="TOP_CENTER" layoutX="42.0" layoutY="609.0" prefHeight="25.0" prefWidth="117.0" text="Join Us">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="81.0" fitWidth="83.0" layoutX="208.0" layoutY="41.0">
+         <image>
+            <Image url="@../../../../../OneDrive/Documents/Semester%202/Java%202/project/Logo.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="315.0" layoutY="55.0" prefHeight="53.0" prefWidth="199.0" text="KAT Cafe">
+         <font>
+            <Font name="System Italic" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="31.0" fitWidth="115.0" layoutX="182.0" layoutY="608.0">
+         <image>
+            <Image url="@../../../../../OneDrive/Documents/Semester%202/Java%202/project/media.PNG" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
