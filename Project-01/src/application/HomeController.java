@@ -11,12 +11,19 @@ import javafx.event.EventHandler;
 
 public class HomeController {
 	@FXML private Button btnOrder;
+	@FXML private Button btnReservation;
 
 	@FXML private void initialize(){
 
 		btnOrder.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent event){
 				onOrderClicked();
+			}
+		});
+
+		btnReservation.setOnAction(new EventHandler<ActionEvent>(){
+			public void handle(ActionEvent event){
+				onReservationClicked();
 			}
 		});
 
@@ -34,6 +41,23 @@ public class HomeController {
 		} catch(Exception e) {
 			e.printStackTrace();
 
+		}
 	}
+
+
+	public void onReservationClicked(){
+		try {
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Reservation.fxml"));
+			Scene scene = new Scene(root,700,860);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+
+		}
 	}
+
+
 }

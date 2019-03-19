@@ -31,7 +31,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="381.0" layoutY="432.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="117.0" text="Reservation">
+      <Button fx:id="btnReservation" layoutX="381.0" layoutY="432.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="117.0" text="Reservation">
          <font>
             <Font size="18.0" />
          </font>
