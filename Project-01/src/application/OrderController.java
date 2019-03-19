@@ -1,5 +1,7 @@
 package application;
 
-public class Order {
+import javafx.fxml.FXML;
+
+public class OrderController {
 
 }
