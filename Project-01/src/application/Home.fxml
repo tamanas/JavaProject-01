@@ -26,7 +26,7 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <Button layoutX="200.0" layoutY="432.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" text="Order">
+      <Button fx:id="btnOrder" layoutX="200.0" layoutY="432.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" text="Order">
          <font>
             <Font size="18.0" />
          </font>
