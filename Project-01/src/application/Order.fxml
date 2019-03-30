@@ -11,23 +11,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OrderController">
    <children>
-      <TextField layoutX="488.0" layoutY="48.0" />
+      <TextField fx:id="username" alignment="CENTER" centerShape="false" editable="false" focusTraversable="false" layoutX="488.0" layoutY="48.0" style="-fx-alignment: center;">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></TextField>
       <Label layoutX="278.0" layoutY="34.0" text="KAT Cafe">
          <font>
             <Font name="System Italic" size="36.0" />
          </font>
       </Label>
-      <ImageView fitHeight="85.0" fitWidth="78.0" layoutX="29.0" layoutY="18.0">
-         <image>
-            <Image url="@../../../../../OneDrive/Documents/Semester%202/Java%202/project/Logo.PNG" />
-         </image>
-      </ImageView>
       <Separator layoutY="115.0" prefHeight="18.0" prefWidth="700.0" />
       <Separator layoutX="7.0" layoutY="714.0" prefHeight="6.0" prefWidth="690.0" />
-      <ListView layoutX="61.0" layoutY="369.0" prefHeight="228.0" prefWidth="179.0" />
+      <ListView fixedCellSize="0.0" layoutX="61.0" layoutY="369.0" prefHeight="228.0" prefWidth="179.0" />
       <Label layoutX="120.0" layoutY="228.0" text="Light Meals" />
       <ListView layoutX="261.0" layoutY="369.0" prefHeight="228.0" prefWidth="179.0" />
       <Label layoutX="525.0" layoutY="228.0" text="Desserts" />
@@ -35,19 +32,23 @@
       <Label layoutX="35.0" layoutY="153.0" text="Home" underline="true" />
       <Separator layoutX="73.0" layoutY="149.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="5.0" />
       <Label layoutX="79.0" layoutY="153.0" text="Order" underline="true" />
-      <ImageView fitHeight="97.0" fitWidth="179.0" layoutX="62.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="97.0" fitWidth="179.0" layoutX="261.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="97.0" fitWidth="179.0" layoutX="466.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageView1" fitHeight="97.0" fitWidth="162.0" layoutX="70.0" layoutY="257.0" pickOnBounds="true" AnchorPane.bottomAnchor="446.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="468.0" AnchorPane.topAnchor="257.0">
+         <image>
+            <Image url="Images/1.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="97.0" fitWidth="129.0" layoutX="261.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="Images/3.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="97.0" fitWidth="179.0" layoutX="466.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="Images/2.jpg" />
+         </image></ImageView>
       <Label layoutX="322.0" layoutY="228.0" text="Beverages" />
       <Button fx:id="btnReservation" layoutX="68.0" layoutY="635.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="169.0" text="Reservation" />
       <Button fx:id="btnConfirm" layoutX="270.0" layoutY="635.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="169.0" text="Continue" />
       <Button fx:id="btnCancel" layoutX="478.0" layoutY="635.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="169.0" text="Cancel" />
       <TextField alignment="CENTER" layoutX="29.0" layoutY="739.0" text="Join Us" />
-      <ImageView fitHeight="39.0" fitWidth="169.0" layoutX="207.0" layoutY="732.0">
-         <image>
-            <Image url="@../../../../../OneDrive/Documents/Semester%202/Java%202/project/media.PNG" />
-         </image>
-      </ImageView>
       <CheckBox layoutX="71.0" layoutY="383.0" mnemonicParsing="false" text="CheckBox" />
       <CheckBox layoutX="71.0" layoutY="412.0" mnemonicParsing="false" text="CheckBox" />
       <CheckBox layoutX="71.0" layoutY="443.0" mnemonicParsing="false" text="CheckBox" />
@@ -69,5 +70,22 @@
       <CheckBox layoutX="478.0" layoutY="500.0" mnemonicParsing="false" text="CheckBox" />
       <CheckBox layoutX="478.0" layoutY="531.0" mnemonicParsing="false" text="CheckBox" />
       <CheckBox layoutX="478.0" layoutY="561.0" mnemonicParsing="false" text="CheckBox" />
+      <Button fx:id="rMeals" layoutX="201.0" layoutY="293.0" mnemonicParsing="false" opacity="0.5" prefHeight="25.0" prefWidth="31.0" text="&gt;" />
+      <Button fx:id="rBeverages" layoutX="334.0" layoutY="300.0" mnemonicParsing="false" opacity="0.5" prefHeight="25.0" prefWidth="31.0" text="&gt;" />
+      <Button fx:id="rDesserts" layoutX="574.0" layoutY="300.0" mnemonicParsing="false" opacity="0.5" prefHeight="25.0" prefWidth="31.0" text="&gt;" />
+      <Button fx:id="lDesserts" layoutX="463.0" layoutY="300.0" mnemonicParsing="false" opacity="0.5" prefHeight="25.0" prefWidth="31.0" text="&lt;" />
+      <Button fx:id="lBeverages" layoutX="263.0" layoutY="300.0" mnemonicParsing="false" opacity="0.5" prefHeight="25.0" prefWidth="31.0" text="&lt;" />
+      <Button fx:id="lMeals" layoutX="79.0" layoutY="300.0" mnemonicParsing="false" onAction="#onLeftMealsClicked" opacity="0.5" prefHeight="25.0" prefWidth="31.0" text="&lt;" />
+      <ImageView fx:id="logo" fitHeight="97.0" fitWidth="200.0" layoutX="29.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+            <Image url="Images/Logo.PNG" />
+      </image>
+      </ImageView>
+      <ImageView fx:id="media" fitHeight="62.0" fitWidth="200.0" layoutX="194.0" layoutY="733.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="Images/media.PNG" />
+         </image></ImageView>
+      <Label fx:id="usernameL" layoutX="511.0" layoutY="87.0" />
+
    </children>
 </AnchorPane>
